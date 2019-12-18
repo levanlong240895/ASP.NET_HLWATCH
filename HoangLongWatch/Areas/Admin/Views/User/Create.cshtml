@@ -1,0 +1,123 @@
+﻿@model Model.EF.User
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section header{
+    Thêm mới người dùng
+}
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+        <div class="row">
+            <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+            <div class="col-lg-7">
+                <div class="p-5">
+                    <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                    </div>
+                    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                @Html.TextBoxFor(model => model.UserName, new { placeholder = "UserName", @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                @Html.PasswordFor(model => model.Password, new { placeholder = "Password", @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                @Html.TextBoxFor(model => model.Address, new { placeholder = "Address", @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                @Html.TextBoxFor(model => model.Email, new { placeholder = "Email", @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                @Html.TextBoxFor(model => model.Phone, new { placeholder = "Phone", @class = "form-control form-control-user" })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-1 mb-3 mb-md-0 text-left">
+                                @Html.CheckBoxFor(model => model.Status, new { @class = "form-control ml-0" })
+                                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-lg-6 d-flex justify-content-center">
+                            @*<div class="col-md-6 mb-3 mb-md-0">*@
+                            <input type="submit" value="Register Account" class="btn btn-primary col-md-12 mb-3 ml-0 mb-md-0" />
+                            @*</div>*@
+                        </div>
+
+                        <div class="form-group d-flex">
+                            <div class="col-lg-6 mb-3 mb-md-0 d-flex align-items-center">
+                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Register with Google
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-6 mb-3 mb-md-0">
+                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                                </a>
+                            </div>
+                        </div>
+
+                    }
+                    <hr>
+                    <div class="text-center">
+                        <a class="mdall" href="forgot-password.html">Forgot Password?</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="mdall" href="login.html">Already have an account? Login!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
