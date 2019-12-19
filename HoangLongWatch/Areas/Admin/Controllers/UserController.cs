@@ -12,10 +12,11 @@ namespace HoangLongWatch.Areas.Admin.Controllers
     public class UserController : BaseController
     {
         // GET: Admin/User
-        public ActionResult Index(int page =1, int pageSize = 2)
+        public ActionResult Index(string searchString, int page = 1, int pageSize = 2)
         {
             var dao = new UserDao();
-            var model = dao.ListAllPaging(page, pageSize);
+            var model = dao.ListAllPaging(searchString, page, pageSize);
+            ViewBag.searchString = searchString;
             return View(model);
         }
         [HttpGet]
@@ -70,6 +71,17 @@ namespace HoangLongWatch.Areas.Admin.Controllers
                 }
             }
             return View("Index");
+        }
+        /// <summary>
+        /// Call Delete User func by Ajax
+        /// </summary>
+        /// <returns></returns>
+
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            new UserDao().Delete(id);
+            return RedirectToAction("Index");
         }
     }
 }
