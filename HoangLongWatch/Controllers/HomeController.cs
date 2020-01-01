@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Dao;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +11,24 @@ namespace HoangLongWatch.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var dao = new ProductDao();
+            //var model = dao.ListAllPaging(searchString, page, pageSize);
+            var model = dao.ListAllProducts();
+            return View(model);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }

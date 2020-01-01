@@ -9,76 +9,83 @@
     Danh sách người dùng
 }
 
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Danh sách</h6>
-        </div>
-        <div class="card-body">
-            @using (Html.BeginForm("Index", "User", FormMethod.Get))
-            {
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-md-4">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control bg-gray-300" value="@ViewBag.searchString" placeholder="Nhập từ khóa..." name="searchString">
-                                <div class="input-group-append ">
-                                    <button class="btn btn-primary align-items-center" type="submit">Tìm kiếm</button>
-                                </div>
+@section jsFooter{
+    <script src="/assets/admin/js/controller/userController.js"></script>
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Danh sách</h6>
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm("Index", "User", FormMethod.Get))
+        {
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control bg-gray-300" value="@ViewBag.searchString" placeholder="Nhập từ khóa..." name="searchString">
+                            <div class="input-group-append ">
+                                <button class="btn btn-primary align-items-center" type="submit">Tìm kiếm</button>
+                                <a class="btn btn-primary align-items-center" href="/Admin/User/Create">Tìm kiếm</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            }
-
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr class="text-center">
-                            <th>ID</th>
-                            <th>Tài khoản</th>
-                            <th>Họ tên</th>
-                            <th>Email</th>
-                            <th>SDT</th>
-                            <th>Tùy chọn</th>
-                        </tr>
-                    </thead>
-                    @*<tfoot>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </tfoot>*@
-                    <tbody class="text-center">
-                        @foreach (var item in Model)
-                        {
-                            <tr id="row_@item.ID">
-                                <td>@item.ID</td>
-                                <td>@item.UserName</td>
-                                <td>@item.Name</td>
-                                <td>@item.Email</td>
-                                <td>@item.Phone</td>
-                                <td>
-                                    <a class="btn btn-warning" href="/Admin/User/Edit/@item.ID">Sửa</a>
-                                    @*<a class="btn btn-danger" href="/Admin/User/Delete/@item.ID">Xóa</a>*@
-                                    @Ajax.ActionLink("Xóa", "Delete", null, new { @id = item.ID }, new AjaxOptions
-                               {
-                                   Confirm = "Bạn có muốn xóa bản ghi này?",
-                                   OnComplete = "$('#row_" + item.ID + "').remove()",
-                                   HttpMethod = "Delete"
-                               }, new {@class="btn btn-danger"})
-                                </td>
-                            </tr>
-                        }
-
-                    </tbody>
-                </table>
-                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @searchString = ViewBag.searchString }))
             </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>Tài khoản</th>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>SDT</th>
+                        <th>Trạng thái</th>
+                        <th>Tùy chọn</th>
+                    </tr>
+                </thead>
+                @*<tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>*@
+                <tbody class="text-center">
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.ID">
+                            <td>@item.ID</td>
+                            <td>@item.UserName</td>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
+                            <td><a href="#" class="btn-active btn btn-light @(item.Status ? "text-success" : "text-danger")" data-id="@item.ID"> @(item.Status ? "Kích hoạt" : "Khóa")</a></td>
+                            <td>
+                                <a class="btn btn-warning" href="/Admin/User/Edit/@item.ID">Sửa</a>
+                                @*<a class="btn btn-danger" href="/Admin/User/Delete/@item.ID">Xóa</a>*@
+                                @Ajax.ActionLink("Xóa", "Delete", null, new { @id = item.ID }, new AjaxOptions
+                           {
+                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                               OnComplete = "$('#row_" + item.ID + "').remove()",
+                               HttpMethod = "Delete"
+                           }, new { @class = "btn btn-danger" })
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @searchString = ViewBag.searchString }))
         </div>
     </div>
+</div>
 
 @Html.ActionLink("Create Account", "Create", "User", null, new { @class = "btn btn-primary" })

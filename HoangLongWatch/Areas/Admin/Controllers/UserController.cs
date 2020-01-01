@@ -35,6 +35,7 @@ namespace HoangLongWatch.Areas.Admin.Controllers
                 long id = dao.Insert(user);
                 if (id > 0)
                 {
+                    SetAlert("Thêm user thành công ", "success");
                     return RedirectToAction("Index", "User");
                 }
                 else
@@ -63,6 +64,7 @@ namespace HoangLongWatch.Areas.Admin.Controllers
                 bool result = dao.Update(user);
                 if (result)
                 {
+                    SetAlert("Cập nhật user thành công ", "success");
                     return RedirectToAction("Index", "User");
                 }
                 else
@@ -82,6 +84,15 @@ namespace HoangLongWatch.Areas.Admin.Controllers
         {
             new UserDao().Delete(id);
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public JsonResult ChangeStatus(long id)
+        {
+            var result = new UserDao().ChangeStatus(id);
+            return Json(new
+            {
+                status = result
+            }) ;
         }
     }
 }

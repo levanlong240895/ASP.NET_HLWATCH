@@ -215,6 +215,7 @@
     <Compile Include="Common\CommonContants.cs" />
     <Compile Include="Common\Encrypter.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -225,6 +226,7 @@
     <Content Include="assets\admin\css\sb-admin-2.css" />
     <Content Include="assets\admin\css\sb-admin-2.min.css" />
     <Content Include="assets\admin\img\undraw_posting_photo.svg" />
+    <Content Include="assets\admin\js\controller\userController.js" />
     <Content Include="assets\admin\js\demo\chart-area-demo.js" />
     <Content Include="assets\admin\js\demo\chart-bar-demo.js" />
     <Content Include="assets\admin\js\demo\chart-pie-demo.js" />
@@ -2483,6 +2485,66 @@
     <Content Include="assets\admin\vendor\jquery\jquery.min.js" />
     <Content Include="assets\admin\vendor\jquery\jquery.slim.js" />
     <Content Include="assets\admin\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="assets\client\css\bootstrap.min.css" />
+    <Content Include="assets\client\css\font-awesome.min.css" />
+    <Content Include="assets\client\css\magnific-popup.css" />
+    <Content Include="assets\client\css\nice-select.css" />
+    <Content Include="assets\client\css\owl.carousel.min.css" />
+    <Content Include="assets\client\css\slicknav.min.css" />
+    <Content Include="assets\client\css\style.css" />
+    <Content Include="assets\client\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\client\fonts\FuturaBT-Book.svg" />
+    <Content Include="assets\client\img\add.jpg" />
+    <Content Include="assets\client\img\cart\cart-1.jpg" />
+    <Content Include="assets\client\img\f-box-1.jpg" />
+    <Content Include="assets\client\img\f-box-2.jpg" />
+    <Content Include="assets\client\img\f-box-3.jpg" />
+    <Content Include="assets\client\img\icons\bag.png" />
+    <Content Include="assets\client\img\icons\chat.png" />
+    <Content Include="assets\client\img\icons\coin.png" />
+    <Content Include="assets\client\img\icons\delivery.png" />
+    <Content Include="assets\client\img\icons\f-delivery.png" />
+    <Content Include="assets\client\img\icons\man.png" />
+    <Content Include="assets\client\img\icons\sales.png" />
+    <Content Include="assets\client\img\icons\search.png" />
+    <Content Include="assets\client\img\icons\voucher.png" />
+    <Content Include="assets\client\img\icons\zoom-plus.png" />
+    <Content Include="assets\client\img\logo.png" />
+    <Content Include="assets\client\img\logos\logo-1.png" />
+    <Content Include="assets\client\img\logos\logo-2.png" />
+    <Content Include="assets\client\img\logos\logo-3.png" />
+    <Content Include="assets\client\img\logos\logo-4.png" />
+    <Content Include="assets\client\img\logos\logo-5.png" />
+    <Content Include="assets\client\img\lookbok.jpg" />
+    <Content Include="assets\client\img\mastercard.jpg" />
+    <Content Include="assets\client\img\paypal.jpg" />
+    <Content Include="assets\client\img\products\img-1.jpg" />
+    <Content Include="assets\client\img\products\img-10.jpg" />
+    <Content Include="assets\client\img\products\img-11.jpg" />
+    <Content Include="assets\client\img\products\img-12.jpg" />
+    <Content Include="assets\client\img\products\img-13.jpg" />
+    <Content Include="assets\client\img\products\img-14.jpg" />
+    <Content Include="assets\client\img\products\img-15.jpg" />
+    <Content Include="assets\client\img\products\img-2.jpg" />
+    <Content Include="assets\client\img\products\img-3.jpg" />
+    <Content Include="assets\client\img\products\img-4.jpg" />
+    <Content Include="assets\client\img\products\img-5.jpg" />
+    <Content Include="assets\client\img\products\img-6.jpg" />
+    <Content Include="assets\client\img\products\img-7.jpg" />
+    <Content Include="assets\client\img\products\img-8.jpg" />
+    <Content Include="assets\client\img\products\img-9.jpg" />
+    <Content Include="assets\client\img\product\product-1.jpg" />
+    <Content Include="assets\client\img\slider-1.jpg" />
+    <Content Include="assets\client\img\slider-2.jpg" />
+    <Content Include="assets\client\img\slider-3.jpg" />
+    <Content Include="assets\client\js\bootstrap.min.js" />
+    <Content Include="assets\client\js\jquery-3.3.1.min.js" />
+    <Content Include="assets\client\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\client\js\jquery.nice-select.min.js" />
+    <Content Include="assets\client\js\jquery.slicknav.js" />
+    <Content Include="assets\client\js\main.js" />
+    <Content Include="assets\client\js\mixitup.min.js" />
+    <Content Include="assets\client\js\owl.carousel.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2678,6 +2740,15 @@
     <Content Include="assets\admin\js\plugins\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\admin\js\plugins\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="assets\admin\js\plugins\ckfinder\userfiles\.htaccess" />
+    <Content Include="assets\client\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\client\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\client\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\client\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\client\fonts\FontAwesome.otf" />
+    <Content Include="assets\client\fonts\FuturaBT-Book.eot" />
+    <Content Include="assets\client\fonts\FuturaBT-Book.otf" />
+    <Content Include="assets\client\fonts\FuturaBT-Book.ttf" />
+    <Content Include="assets\client\fonts\FuturaBT-Book.woff" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2702,14 +2773,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="assets\client\" />
+    <Folder Include="assets\client\img\categories-page\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
