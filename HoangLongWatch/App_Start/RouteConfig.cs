@@ -14,6 +14,13 @@ namespace HoangLongWatch
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Products List",
+                url: "san-pham",
+                defaults: new { controller = "Product", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "HoangLongWatch.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Product Detail",
                 url: "san-pham/{metatitle}-{id}",
                 defaults: new { controller = "Product", action = "Detail", id = UrlParameter.Optional }  ,

@@ -18,6 +18,7 @@ namespace Model.Dao
         public List<Product> ListAllProducts()
         {
             return db.Products.ToList();
+            //return db.Products.OrderBy(x => x.ID).ToList();
         }
 
         public Product Detail(long id)

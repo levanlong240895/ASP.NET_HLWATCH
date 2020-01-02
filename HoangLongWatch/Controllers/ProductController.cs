@@ -12,7 +12,10 @@ namespace HoangLongWatch.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View();
+            var dao = new ProductDao();
+            //var model = dao.ListAllPaging(searchString, page, pageSize);
+            var model = dao.ListAllProducts();
+            return View(model);
         }
         public ActionResult Detail(long id)
         {
