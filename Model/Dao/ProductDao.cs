@@ -18,7 +18,17 @@ namespace Model.Dao
         public List<Product> ListAllProducts()
         {
             return db.Products.ToList();
-            //return db.Products.OrderBy(x => x.ID).ToList();
+        }
+
+        public List<Product> ListProducts(ref int totalRecord, int pageIndex, int pageSize)
+        {
+            totalRecord = db.Products.Count();
+            //return db.Products.ToList();
+            return db.Products
+                .OrderByDescending(x => x.ID)
+                .Skip((pageIndex - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
         }
 
         public Product Detail(long id)

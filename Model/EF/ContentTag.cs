@@ -10,10 +10,12 @@ namespace Model.EF
     public partial class ContentTag
     {
         [Key]
+        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ContentID { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
         public string TagID { get; set; }
     }
