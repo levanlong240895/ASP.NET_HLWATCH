@@ -59,6 +59,8 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Dao\CategoryDao.cs" />
     <Compile Include="Dao\ContentDao.cs" />
+    <Compile Include="Dao\OrderDao.cs" />
+    <Compile Include="Dao\OrderDetailDao.cs" />
     <Compile Include="Dao\ProductDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EF\About.cs" />

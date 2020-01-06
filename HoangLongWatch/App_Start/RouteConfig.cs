@@ -14,6 +14,20 @@ namespace HoangLongWatch
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+             name: "Success",
+             url: "thanh-cong",
+             defaults: new { controller = "Cart", action = "Success", page = UrlParameter.Optional },
+             namespaces: new[] { "HoangLongWatch.Controllers" }
+         );
+
+            routes.MapRoute(
+              name: "Payment",
+              url: "thanh-toan",
+              defaults: new { controller = "Cart", action = "Payment", page = UrlParameter.Optional },
+              namespaces: new[] { "HoangLongWatch.Controllers" }
+          );
+
+            routes.MapRoute(
               name: "Add to Cart",
               url: "them-gio-hang",
               defaults: new { controller = "Cart", action = "AddItem", page = UrlParameter.Optional },
@@ -37,8 +51,8 @@ namespace HoangLongWatch
             routes.MapRoute(
                 name: "Product Detail",
                 url: "san-pham/{metatitle}-{id}",
-                defaults: new { controller = "Product", action = "Detail", id = UrlParameter.Optional }  ,
-                namespaces: new[] {"HoangLongWatch.Controllers"}
+                defaults: new { controller = "Product", action = "Detail", id = UrlParameter.Optional },
+                namespaces: new[] { "HoangLongWatch.Controllers" }
             );
 
             routes.MapRoute(

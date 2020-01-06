@@ -69,12 +69,22 @@
                         <li><span>Category :</span> Men’s Wear</li>
                         <li><span>Tags :</span> man, shirt, dotted, elegant, cool</li>
                     </ul>
-                    <div class="product-quantity">
+                    @using (Html.BeginForm("AddItem1", "Cart"))
+                    {
+                        <div class="product-quantity">
+                            <div class="pro-qty">
+                                <input type="text" id="quantity" name="quantity" value="1">
+                                <input type="hidden" id="productId" name="productId" value="@Model.ID">
+                            </div>
+                        </div>
+                        <input type="submit" id=" Add" class="primary-btn pc-btn" value="Add to cart" />
+                    }
+                    @*<div class="product-quantity">
                         <div class="pro-qty">
                             <input type="text" value="2">
                         </div>
                     </div>
-                    <a href="/them-gio-hang?productId=@Model.ID&quantity=2" class="primary-btn pc-btn">Add to cart</a>
+                    <a href="/them-gio-hang?productId=@Model.ID&quantity=2" class="primary-btn pc-btn">Add to cart</a>*@
                     <ul class="p-info">
                         <li>Product Information</li>
                         <li>Reviews</li>

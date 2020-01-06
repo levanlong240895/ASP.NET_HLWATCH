@@ -26,7 +26,6 @@ C:\Users\longlv\Desktop\MVC\Model\bin\Debug\PagedList.Mvc.xml
 C:\Users\longlv\Desktop\MVC\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\longlv\Desktop\MVC\Model\obj\Debug\Model.dll
 C:\Users\longlv\Desktop\MVC\Model\obj\Debug\Model.pdb
-C:\Users\longlv\Desktop\MVC\Model\obj\Debug\Model.csprojAssemblyReference.cache
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\bin\Debug\Model.dll.config
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\bin\Debug\Model.dll
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\bin\Debug\Model.pdb
@@ -42,3 +41,4 @@ C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\obj\
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\obj\Debug\Model.dll
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\obj\Debug\Model.pdb
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\longlv\Desktop\MVC\Model\obj\Debug\Model.csprojAssemblyReference.cache

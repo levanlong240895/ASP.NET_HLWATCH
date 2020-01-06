@@ -1,4 +1,5 @@
-﻿using Model.Dao;
+﻿using HoangLongWatch.Models;
+using Model.Dao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace HoangLongWatch.Controllers
 {
     public class HomeController : Controller
     {
+        private const string CartSession = "CartSession";
         public ActionResult Index()
         {
             var dao = new ProductDao();
@@ -16,6 +18,18 @@ namespace HoangLongWatch.Controllers
 
             var model = dao.ListAllProducts();
             return View(model);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult HeaderCart()
+        {
+            var cart = Session[Common.CommonContants.CartSession];
+            var list = new List<CartItem>();
+            if(cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            return PartialView(list);
         }
 
         //public ActionResult About()

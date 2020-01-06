@@ -2540,6 +2540,7 @@
     <Content Include="assets\client\img\slider-2.jpg" />
     <Content Include="assets\client\img\slider-3.jpg" />
     <Content Include="assets\client\js\bootstrap.min.js" />
+    <Content Include="assets\client\js\controller\cartController.js" />
     <Content Include="assets\client\js\jquery-3.3.1.min.js" />
     <Content Include="assets\client\js\jquery.magnific-popup.min.js" />
     <Content Include="assets\client\js\jquery.nice-select.min.js" />
@@ -2779,6 +2780,9 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Shared\HeaderCart.cshtml" />
+    <Content Include="Views\Cart\Payment.cshtml" />
+    <Content Include="Views\Cart\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,9 +5,9 @@
 
 }
 
-@section cart {
-    @ViewBag.Cart
-}
+@section jsFooter{
+    <script src="/assets/client/js/controller/cartController.js"></script>
+    }
 
 <section class="page-add cart-page-add">
     <div class="container">
@@ -54,45 +54,51 @@
                             <td class="price-col">$@item.Product.Price</td>
                             <td class="quantity-col">
                                 <div class="pro-qty">
-                                    <input type="text" value="@item.Quantity">
+                                    <input type="text" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity">
                                 </div>
                             </td>
                             <td class="total">$@(item.Quantity * item.Product.Price)</td>
-                            <td class="product-close">x</td>
+                            <td class="d-flex">
+                                <button type="button"  class="btn site-btn btn-success text-white mr-lg-1 border-secondary ">Update</button>
+                                <button type="button" data-id="@item.Product.ID" class="btn site-btn btn-danger text-white ml-lg-1 border-secondary btnDelete">Delete</button>
+                                @*x*@
+                            </td>
                         </tr>
                     }
-                    @*<tr>
-                            <td class="product-col">
-                                <img src="/assets/client//img/product/product-1.jpg" alt="">
-                                <div class="p-title">
-                                    <h5>Blue Dotted Shirt</h5>
-                                </div>
-                            </td>
-                            <td class="price-col">$29</td>
-                            <td class="quantity-col">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
-                                </div>
-                            </td>
-                            <td class="total">$29</td>
-                            <td class="product-close">x</td>
-                        </tr>*@
                 </tbody>
             </table>
         </div>
-        <div class="cart-btn">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="coupon-input">
-                        <input type="text" placeholder="Enter cupone code">
+
+        @{
+            if (Model.Count > 0)
+            {
+                <div class="cart-btn">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="coupon-input">
+                                <input type="text" placeholder="Enter cupone code">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1 text-left text-lg-right">
+                            <div id="btnDeleteAll" class="site-btn clear-btn">Clear Cart</div>
+                            <div id="btnUpdate" class="site-btn update-btn">Update Cart</div>
+                        </div>
                     </div>
+
                 </div>
-                <div class="col-lg-5 offset-lg-1 text-left text-lg-right">
-                    <div class="site-btn clear-btn">Clear Cart</div>
-                    <div class="site-btn update-btn">Update Cart</div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    Do not have any product!
                 </div>
-            </div>
-        </div>
+            }
+        }
+
+    <div class="row mt-3 justify-content-end">
+        <div id="btnPayment" class="site-btn clear-btn mr-3">Thanh toán</div>
+        <div id="btnContinue" class="site-btn clear-btn mr-3">Tiếp tục mua hàng</div>
+    </div>
     </div>
     <div class="shopping-method">
         <div class="container">

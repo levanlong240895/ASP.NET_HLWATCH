@@ -50,10 +50,11 @@
                 <div class="header-right">
                     <img src="/assets/client/img/icons/search.png" alt="" class="search-trigger">
                     <img src="/assets/client/img/icons/man.png" alt="">
-                    <a href="gio-hang">
+                    @{ Html.RenderAction("HeaderCart", "Home"); }
+                    @*<a href="gio-hang">
                         <img src="/assets/client/img/icons/bag.png" alt="">
                         <span>@RenderSection("cart", false)</span>
-                    </a>
+                    </a>*@
                 </div>
                 <div class="user-access">
                     <a href="#">Register</a>
@@ -61,7 +62,7 @@
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="#">Home</a></li>
+                        <li><a class="active" href="/">Home</a></li>
                         <li>
                             <a href="#">Shop</a>
                             <ul class="sub-menu">
@@ -184,6 +185,7 @@
     <script src="/assets/client/js/jquery.nice-select.min.js"></script>
     <script src="/assets/client/js/mixitup.min.js"></script>
     <script src="/assets/client/js/main.js"></script>
+    @RenderSection("jsFooter", required: false)
 </body>
 
 </html>
