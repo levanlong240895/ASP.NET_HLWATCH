@@ -1,0 +1,12 @@
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\Common.deps.json
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\Common.dll
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\Common.pdb
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\longlv\Desktop\MVC\Common\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
+C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.csproj.CopyComplete
+C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.dll
+C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.pdb

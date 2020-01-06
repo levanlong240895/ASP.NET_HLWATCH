@@ -298,3 +298,8 @@ C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\HoangLongW
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\HoangLongWatch\obj\Debug\HoangLongWatch.csproj.CopyComplete
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\HoangLongWatch\obj\Debug\HoangLongWatch.dll
 C:\Users\longlv\Desktop\ASP.NET_HLWATCH-master\ASP.NET_HLWATCH-master\HoangLongWatch\obj\Debug\HoangLongWatch.pdb
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\Common.dll
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\SendGrid.dll
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\Common.pdb
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\SendGrid.pdb
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\SendGrid.xml

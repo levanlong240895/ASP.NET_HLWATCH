@@ -1,8 +1,11 @@
-﻿using HoangLongWatch.Models;
+﻿using Common;
+using HoangLongWatch.Models;
 using Model.Dao;
 using Model.EF;
+//using SendGrid.Helpers.Mail;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -161,10 +164,8 @@ namespace HoangLongWatch.Controllers
         public ActionResult Payment(string First_Name, string Last_Name, string Street_Address, string Country, string City, string Phone, string Email)
         {
 
-            try
-            {
-
-
+            //try
+            //{
                 var order = new Order();
                 order.CreatedDate = DateTime.Now;
                 order.ShipName = First_Name + " " + Last_Name;
@@ -176,6 +177,7 @@ namespace HoangLongWatch.Controllers
                 var id = new OrderDao().Insert(order);
                 var cart = (List<CartItem>)Session[CartSession];
                 var detailDao = new Model.Dao.OrderDetailDao();
+                decimal total = 0;
                 if(cart.Count > 0)
                 {
                     foreach (var item in cart)
@@ -186,17 +188,30 @@ namespace HoangLongWatch.Controllers
                         orderDetail.Price = item.Product.Price;
                         orderDetail.Quantity = item.Quantity;
                         detailDao.Insert(orderDetail);
+
+                        total += (item.Product.Price.GetValueOrDefault(0) * item.Quantity);
                     }
                 }
-                
+                string content = System.IO.File.ReadAllText(Server.MapPath("~/assets/client/template/neworder.html"));
+
+                content = content.Replace("{{CustomerName}}", order.ShipName);
+                content = content.Replace("{{Phone}}", order.ShipMobile);
+                content = content.Replace("{{Email}}", order.ShipEmail);
+                content = content.Replace("{{Address}}", order.ShipAddress);
+                content = content.Replace("{{Total}}", total.ToString("N0"));
+                var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
+
+                new MailHelper().SendMail(order.ShipEmail, "Đơn hàng mới từ HLwatch", content);
+                new MailHelper().SendMail(toEmail, "Đơn hàng mới từ HLwatch", content);
+
                 //return View();
                 return Redirect("/thanh-cong");
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    return Redirect("/loi-thanh-toan");
+            //    throw;
+            //}
         }
 
         public ActionResult Success()

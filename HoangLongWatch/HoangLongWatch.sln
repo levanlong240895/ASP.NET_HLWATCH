@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoangLongWatch", "HoangLong
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{52C227A2-8AB8-4153-9D74-33785011EB64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{4BDBC7B7-92D2-4202-A74E-A4A7E55E0AEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{52C227A2-8AB8-4153-9D74-33785011EB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C227A2-8AB8-4153-9D74-33785011EB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C227A2-8AB8-4153-9D74-33785011EB64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BDBC7B7-92D2-4202-A74E-A4A7E55E0AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDBC7B7-92D2-4202-A74E-A4A7E55E0AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDBC7B7-92D2-4202-A74E-A4A7E55E0AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDBC7B7-92D2-4202-A74E-A4A7E55E0AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
