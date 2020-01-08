@@ -45,20 +45,36 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="#"><img src="/assets/client/img/logo.png" alt=""></a>
+                    <a href="/"><img src="/assets/client/img/logo.png" alt=""></a>
                 </div>
                 <div class="header-right">
                     <img src="/assets/client/img/icons/search.png" alt="" class="search-trigger">
                     <img src="/assets/client/img/icons/man.png" alt="">
                     @{ Html.RenderAction("HeaderCart", "Home"); }
                     @*<a href="gio-hang">
-                        <img src="/assets/client/img/icons/bag.png" alt="">
-                        <span>@RenderSection("cart", false)</span>
-                    </a>*@
+                            <img src="/assets/client/img/icons/bag.png" alt="">
+                            <span>@RenderSection("cart", false)</span>
+                        </a>*@
                 </div>
-                <div class="user-access">
-                    <a href="#">Register</a>
-                    <a href="#" class="in">Sign in</a>
+                <div class="user-access d-flex text-right" >
+                    @{
+                        var session = (UserLogin)Session[HoangLongWatch.Common.CommonContants.USER_SESSION];
+                    }
+
+                    @if (session == null)
+                    {
+                        <a href="/dang-ky">Register</a>
+                        <a href="/dang-nhap" class="in">Sign in</a>
+                    }
+                    else
+                    {
+                        <a>
+                            <img src="/assets/client/img/avartar/avatar.jpg" class=" mr-3" style="width: 30px; height: 30px; border-radius: 50%" alt="Cinque Terre">
+                            @*<p>@session.UserName</p>*@
+                        </a>
+                        <a href="/dang-xuat">Logout</a>
+                    }
+
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
@@ -73,7 +89,7 @@
                         </li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="/lien-he" >Contact</a></li>
+                        <li><a href="/lien-he">Contact</a></li>
                     </ul>
                 </nav>
             </div>

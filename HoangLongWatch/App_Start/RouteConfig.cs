@@ -13,6 +13,22 @@ namespace HoangLongWatch
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.IgnoreRoute("{*botdetect}", new { botdetect = @"(.*)BotDetectCaptcha\.ashx" });
+
+           routes.MapRoute(
+           name: "Logout",
+           url: "dang-xuat",
+           defaults: new { controller = "User", action = "Logout", page = UrlParameter.Optional },
+           namespaces: new[] { "HoangLongWatch.Controllers" }
+       );
+
+            routes.MapRoute(
+            name: "Sign In",
+            url: "dang-nhap",
+            defaults: new { controller = "User", action = "Login", page = UrlParameter.Optional },
+            namespaces: new[] { "HoangLongWatch.Controllers" }
+        );
+
             routes.MapRoute(
              name: "Success",
              url: "thanh-cong",

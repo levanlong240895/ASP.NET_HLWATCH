@@ -282,3 +282,8 @@ C:\Users\longlv\Desktop\MVC\HoangLongWatch\obj\Debug\HoangLongWatch.csprojAssemb
 C:\Users\longlv\Desktop\MVC\HoangLongWatch\obj\Debug\HoangLongWatch.csproj.CopyComplete
 C:\Users\longlv\Desktop\MVC\HoangLongWatch\obj\Debug\HoangLongWatch.dll
 C:\Users\longlv\Desktop\MVC\HoangLongWatch\obj\Debug\HoangLongWatch.pdb
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\BotDetect.dll
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\BotDetect.Web.Mvc.dll
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\System.Data.SQLite.dll
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\System.Data.SQLite.xml
+C:\Users\longlv\Desktop\MVC\HoangLongWatch\bin\System.Data.SQLite.dll.config

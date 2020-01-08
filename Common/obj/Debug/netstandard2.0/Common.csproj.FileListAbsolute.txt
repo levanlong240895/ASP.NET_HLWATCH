@@ -10,3 +10,4 @@ C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.
 C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.csproj.CopyComplete
 C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.dll
 C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.pdb
+C:\Users\longlv\Desktop\MVC\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache
