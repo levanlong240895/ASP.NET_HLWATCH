@@ -56,6 +56,20 @@ namespace HoangLongWatch
             );
 
             routes.MapRoute(
+               name: "Contact",
+               url: "lien-he",
+               defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional },
+               namespaces: new[] { "HoangLongWatch.Controllers" }
+           );
+
+            routes.MapRoute(
+              name: "Register",
+              url: "dang-ky",
+              defaults: new { controller = "User", action = "Register", id = UrlParameter.Optional },
+              namespaces: new[] { "HoangLongWatch.Controllers" }
+          );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
